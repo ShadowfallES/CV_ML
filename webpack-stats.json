@@ -1,0 +1,16 @@
+{
+  "status": "done",
+  "assets": {
+    "main-d30122f8ea720c3fb7a1.js": {
+      "name": "main-d30122f8ea720c3fb7a1.js",
+      "path": "C:\\Users\\ShadowfallES\\Desktop\\Project Kronos\\static\\webpack_bundles\\main-d30122f8ea720c3fb7a1.js",
+      "publicPath": "auto"
+    }
+  },
+  "chunks": {
+    "main": [
+      "main-d30122f8ea720c3fb7a1.js"
+    ]
+  },
+  "publicPath": "auto"
+}

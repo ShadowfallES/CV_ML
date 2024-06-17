@@ -1,0 +1,51 @@
+{% load render_bundle from webpack_loader %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV2024</title>
+	{% render_bundle 'main' 'css' %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block style %} {% endblock %}
+</head>
+<body>
+    <header class="mb-4">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+            	<a class="navbar-brand" href="#">CV Largaespada 2024</a>
+            	<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            	</button>
+            	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                	<div class="offcanvas-header">
+                		<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Indice</h5>
+                		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                	</div>
+                <div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="{% url 'index' %}">Pagina 1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'pagina2' %}">Pagina 2</a>
+						</li>
+						<li class="nav-item dropdown">
+					</ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+	<div id="carta_1" class="container mt-3 g-0">
+		<div class="rectangulo_Top container"></div>
+		{% block main %}
+		{% render_bundle 'main' 'css' %}
+		{% endblock%} 
+		<footer class="rectangulo_Bottom container"></footer>
+	</div>
+</body>
+<script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+</html>
