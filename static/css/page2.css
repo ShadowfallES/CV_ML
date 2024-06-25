@@ -1,0 +1,14 @@
+.grid-container-2 {
+  display: grid;
+  column-gap: 1px;
+  grid-template-columns: repeat(2, 3fr);
+  grid-template-rows: repeat(5, 20px);
+  font-size: 0.9rem;
+  padding: 0px 0px 10px 10px;
+}
+.grid-container-2 .grid-item {
+  padding-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=page2.css.map */

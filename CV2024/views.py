@@ -35,7 +35,24 @@ def index(request):
 
 def page2(request):
     
-    Reponse = render(request, "pagina_2.html")
+    Indice_pagina_2 = {
+        "Habilidades": "Habilidades",
+        "Habilidades_Blandas": "Habilidades Blandas"
+    }
+
+    Datos_Pagina_2 = {
+        "Curso_Web50" : "CS50’s Web Programming with Python and JavaScript",
+        "IT" : "IT Essentials",
+        "Linux" : "NGD Linux Unhatched",
+        "Entidad_1" : "Fundación Uno",
+        "Entidad_2" : "Centro Juvenil Don Bosco",
+        "Web50" : """Profundizando más en el diseño y la implementación de aplicaciones web con Python, JavaScript y SQL utilizando marcos como Django y Bootstrap.""",
+        "ITESSENTIAL" : "IT Essentials abarca los principios básicos de hardware y software informático.",
+        "NGDLINUX" : "Curso básico de Linux es ofrecido por Network Development Group (NDG)."
+        
+    }
+
+    Reponse = render(request, "pagina_2.html", {"Indice" : Indice_pagina_2, "Datos" : Datos_Pagina_2})
     Reponse.status_code = 200
 
     return Reponse 
