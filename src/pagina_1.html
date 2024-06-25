@@ -3,16 +3,61 @@
 
 {% block main %}
 
-    <h1 class="text-center name">{{name}}</h1>
-    <div class="figura mt-4">
-        <p class="about text-center">{{about}}</p>
+    <h1 class="text-center name">{{Datos.Nombre}}</h1>
+    <div class="mt-4 mx-4 grid-container">
+        <div class="grid-item"><a href="#"></a><i class="fa-solid fa-map-location fa-lg"></i>&nbsp;Managua, Nicaragua<strong>&nbsp;|</strong></div>
+        <div class="grid-item"><a href="#"></a><i class="fa-solid fa-envelope fa-lg"></i>&nbsp; mlargaespada98.gonzalez@gmail.com<strong>&nbsp;|</strong></div>
+        <div class="grid-item"><a href="#"></a><i class="fa-solid fa-square-phone fa-lg"></i>&nbsp; +5058466-8307</div>
+        <div class="grid-item"><a href="#"></a><i class="fa-brands fa-linkedin fa-lg"></i>&nbsp; /ulargaespada<strong>&emsp;&emsp;&emsp;|</strong></div>
+        <div class="grid-item"><a href="#"></a><i class="fa-brands fa-telegram fa-lg"></i>&nbsp; /ShadowfallES<strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|</strong></div>
+        <div class="grid-item"><a href="#"></a><i class="fa-brands fa-github-square fa-lg"></i>&nbsp; ShadowfallES</div>   
     </div>
+
+    <div class="figura mt-4">
+        <p class="about text-center">{{Indice_Pagina_1.Acerca}}</p>
+    </div>
+
     <div>
-        <p class="mx-4 mt-4 text-wrap text-justify" style="text-align: justify;">
-            Tengo 25 años y actualmente estoy cursando el quinto año de Ingeniería en
-            Computación en la Universidad Nacional de Ingeniería. Me caracterizo por ser una
-            persona trabajadora y cumplidora, comprometido con mis estudios y metas
-            académicas.
+        <p class="mx-5 mt-4 text-wrap" style="text-align: justify; font-size: 0.9rem;">
+            {{Datos.text_acerca}}
         </p>
     </div>
+
+    <div class="figura mt-4">
+        <p class="about text-center">{{Indice_Pagina_1.Educacion}}</p>
+    </div>
+    <div>
+        <p class="mx-5 mt-4 Carrera" style="margin: 0; font-size: 1.3rem;">
+            {{Datos.Carrera}}
+        </p>
+        <p class="mx-5" style="font-size: 0.9rem; margin: 0;">
+            {{Datos.Universidad}}
+        </p>
+        <p class="mx-5" style="font-size: 0.8rem;">
+            <strong>
+                2016-2024
+            </strong>
+        </p>
+        <p class="mx-5 mt-4 Curso_CS50" style=" margin: 0; font-size: 1.3rem;">
+            {{Datos.Curso_CS50}}
+        </p>
+        <p class="mx-5" style="margin: 0;">
+            <a href="https://code-fu.net.ni">{{Datos.Entidad}}</a>
+        </p>
+        <p class="mx-5" style="font-size: 0.8rem;">
+            <strong>
+                2020
+            </strong>
+        </p>
+        <p class="mx-5 text-wrap" style="text-align: justify; font-size: 0.9rem;">
+            {{Datos.Info_CS50}}
+        </p>
+        <p class="mx-5 mt-4" style="margin: 0%;">
+            <a href="https://certificates.cs50.io/78872086-bd72-4a0c-ad8a-b88ca888362c.pdf?size=letter">
+                Certificado CS50
+            </a>
+        </p>
+        <img class="mx-5 QRCS50" src="{% static 'img/QR CS50.png' %}" alt="QR CS50 Certificado">
+    </div>
+    
 {% endblock %}
